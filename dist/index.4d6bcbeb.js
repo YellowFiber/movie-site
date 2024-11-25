@@ -783,6 +783,8 @@ exports.default = Headline;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
+var _movie = require("../store/movie");
+var _movieDefault = parcelHelpers.interopDefault(_movie);
 class Search extends (0, _heropy.Component) {
     render() {
         this.el.classList.add('search');
@@ -793,15 +795,36 @@ class Search extends (0, _heropy.Component) {
       </button>
     `;
         const inputEl = this.el.querySelector('input');
-        inputEl.addEventListener('input', ()=>{});
+        inputEl.addEventListener('input', ()=>{
+            (0, _movieDefault.default).state.searchText = inputEl.value;
+        });
         inputEl.addEventListener('keydown', (event)=>{
-            event.key;
+            if (event.key === 'Enter' && (0, _movieDefault.default).state.searchText.trim()) (0, _movie.searchMovies)(1);
         });
         const btnEl = this.el.querySelector('.btn');
-        btnEl.addEventListener('click', ()=>{});
+        btnEl.addEventListener('click', ()=>{
+            if ((0, _movieDefault.default).state.searchText.trim()) (0, _movie.searchMovies)(1);
+        });
     }
 }
 exports.default = Search;
+
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../store/movie":"kq1bo"}],"kq1bo":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "searchMovies", ()=>searchMovies);
+var _heropy = require("../core/heropy");
+const store = new (0, _heropy.Store)({
+    searchText: "",
+    page: 1,
+    movies: []
+});
+exports.default = store;
+const searchMovies = async (page)=>{
+    const res = await fetch(`https://omdbapi.com?apikey=feb5df74&s=${store.state.searchText}&page=${page}`);
+    const json = await res.json();
+    console.log(json);
+};
 
 },{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["h4jLA","gLLPy"], "gLLPy", "parcelRequire94c2")
 
