@@ -1,16 +1,3 @@
-html {
-  --color-black: #0e111b;
-  --color-white: #fff;
-  --color-white-50: #ffffff80;
-  --color-white-30: #ffffff4d;
-  --color-white-20: #fff3;
-  --color-white-10: #ffffff1a;
-  --color-white-5: #ffffff0d;
-  --color-primary: #fdc000;
-  --color-hover: #f86a05;
-  --color-area: #1c212e;
-}
-
 body {
   color: var(--color-white);
   background: var(--color-black);
@@ -22,6 +9,19 @@ body {
   max-width: 1120px;
   margin: 0 auto;
   padding: 40px 0;
+}
+
+html {
+  --color-black: #0e111b;
+  --color-white: #fff;
+  --color-white-50: #ffffff80;
+  --color-white-30: #ffffff4d;
+  --color-white-20: #fff3;
+  --color-white-10: #ffffff1a;
+  --color-white-5: #ffffff0d;
+  --color-primary: #fdc000;
+  --color-hover: #f86a05;
+  --color-area: #1c212e;
 }
 
 .headline {
