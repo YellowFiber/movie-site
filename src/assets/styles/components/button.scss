@@ -25,3 +25,14 @@
     }
   }
 }
+
+.view-more {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 300px;
+
+  &.hide {
+    display: none;
+  }
+}

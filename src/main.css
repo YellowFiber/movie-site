@@ -49,6 +49,16 @@ html {
   color: var(--color-white);
 }
 
+.view-more {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 300px;
+}
+.view-more.hide {
+  display: none;
+}
+
 .headline {
   margin: 0 0 40px;
 }
@@ -97,7 +107,6 @@ html {
 .movie-list .movies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
 }
 .movie-list .movies .movie {
