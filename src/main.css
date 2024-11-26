@@ -49,6 +49,27 @@ html {
   color: var(--color-white);
 }
 
+.the-loader {
+  margin: 30px auto;
+  width: 30px;
+  height: 30px;
+  border: 4px solid var(--color-primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loader 1s infinite linear;
+}
+.the-loader.hide {
+  display: none;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .view-more {
   display: block;
   margin: 20px auto;
