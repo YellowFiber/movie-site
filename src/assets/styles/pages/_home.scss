@@ -48,6 +48,12 @@
   background: var(--color-area);
   border-radius: 4px;
 
+  .message {
+    font-size: 20px;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
   .movies {
     display: flex;
     flex-wrap: wrap;

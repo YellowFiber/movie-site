@@ -125,6 +125,11 @@ html {
   background: var(--color-area);
   border-radius: 4px;
 }
+.movie-list .message {
+  font-size: 20px;
+  color: var(--color-primary);
+  text-align: center;
+}
 .movie-list .movies {
   display: flex;
   flex-wrap: wrap;
