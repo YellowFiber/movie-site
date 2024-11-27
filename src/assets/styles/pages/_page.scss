@@ -1,0 +1,77 @@
+.skeleton {
+  overflow: hidden;
+  position: relative;
+  background: var(--color-area);
+  border-radius: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(270deg,
+      rgba(255,255,255,0),
+      rgba(255,255,255,.1),
+      rgba(255,255,255,0)
+    );
+    transform: translateX(-100%);
+    animation: skeleton-loader 2s infinite;
+  }
+}
+
+@keyframes skeleton-loader {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.the-movie {
+  display: flex;
+  gap: 70px;
+  color: var(--color-white-50);
+
+  .poster {
+    flex-shrink: 0;
+    --width: 500px;
+    width: var(--width);
+    height: calc(var(--width) * 3 / 2);
+    background: var(--color-area);
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .specs {
+    flex-grow: 1;
+  }
+  .title {
+    margin: 0 0 30px;
+    font-family: "Oswald", sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    color: var(--color-white);
+
+    &.skeleton {
+      height: 70px;
+    }
+  }
+  .labels {
+    margin: 0 0 20px;
+    color: var(--color-primary);
+
+    &.skeleton {
+      height: 30px;
+    }
+  }
+  .plot {
+    &.skeleton {
+      width: 80%;
+      height: 400px;
+    }
+  }
+  h3 {
+    margin: 24px 0 6px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: var(--color-white);
+  }
+}
