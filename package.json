@@ -2,14 +2,20 @@
   "name": "movies",
   "version": "1.0.0",
   "scripts": {
-    "dev" : "parcel ./index.html",
-    "build" : "parcel build ./index.html"
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.13.0"
+    "dotenv": "^16.4.5",
+    "parcel": "^2.13.0",
+    "vercel": "^39.1.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
   }
 }
