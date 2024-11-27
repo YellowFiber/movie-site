@@ -11,6 +11,18 @@ body {
   padding: 40px 0;
 }
 
+@media (width <= 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+}
+
 html {
   --color-black: #0e111b;
   --color-white: #fff;
@@ -147,6 +159,20 @@ header .user img {
   width: 100%;
 }
 
+@media (width <= 600px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .user {
+    right: 20px;
+  }
+}
+
 .headline {
   margin: 0 0 40px;
 }
@@ -250,6 +276,12 @@ header .user img {
   color: var(--color-white);
 }
 
+@media (width <= 600px) {
+  .headline h1 {
+    font-size: 60px;
+  }
+}
+
 .skeleton {
   background: var(--color-area);
   border-radius: 10px;
@@ -330,6 +362,27 @@ header .user img {
   margin: 24px 0 6px;
   font-family: Oswald, sans-serif;
   font-size: 20px;
+}
+
+@media (width <= 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+
+@media (width <= 720px) {
+  .the-movie {
+    display: block;
+  }
+
+  .the-movie .title {
+    margin-top: 50px;
+    font-size: 50px;
+  }
 }
 
 .about .photo {

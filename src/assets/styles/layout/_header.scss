@@ -56,3 +56,17 @@ header {
     }
   }
 }
+
+@media (max-width:600px) {
+  header {
+    padding: 14px 20px;
+
+    nav {
+      display: none;
+    }
+
+    .user {
+      right: 20px;
+    }
+  }
+}

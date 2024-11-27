@@ -75,3 +75,23 @@
     color: var(--color-white);
   }
 }
+
+@media (max-width:1200px) {
+  .the-movie {
+    gap: 30px;
+
+    .poster {
+      --width: 300px;
+    }
+  }
+}
+@media (max-width:720px) {
+  .the-movie {
+    display: block;
+    
+    .title {
+      margin-top: 50px;
+      font-size: 50px;
+    }
+  }
+}
