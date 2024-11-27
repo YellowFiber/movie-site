@@ -1,0 +1,30 @@
+.about {
+  .photo {
+    margin: 0 auto 20px;
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    background-size: cover;
+  }
+
+  .name {
+    margin: 0 0 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+  }
+
+  p {
+    margin: 0 0 4px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
